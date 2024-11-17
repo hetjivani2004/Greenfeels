@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenFeels - Sustainable Living</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- navigation menu -->
+<nav class="main-nav">
+    <div class="brand-logo">GreenFeels</div>
+    <div class="menu-items">
+        <a href="#main">Home</a>
+        <a href="#eco-products">Shop</a>
+        <a href="#footprint">Carbon Calculator</a>
+        <a href="#support">Contact</a>
+    </div>
+
+            <!-- shopping bag and hamburger menu -->
+    <div class="nav-right">
+        <div class="shopping-bag">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="bag-count">0</span>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+   <!-- my banner -->
+<section id="main" class="banner-section">
+    <div class="banner-slider">
+        <div class="slide">
+            <img src="img/banner1.jpg" alt="Eco-friendly Products">
+            <div class="slide-content">
+                <h1>Green Feels</h1>
+                <p>Sustainable Living Made Simple</p>
+                <a href="#eco-products" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="img/banner2.jpg" alt="Natural Products">
+            <div class="slide-content">
+                <h1>Eco-Friendly</h1>
+                 <p>Better for You, Better for Earth</p>
+                <a href="#eco-products" class="shop-btn">Explore</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="img/banner3.jpg" alt="Sustainable Living">
+            <div class="slide-content">
+                     <h1>Zero Waste</h1>
+                     <p>Small Changes, Big Impact</p>
+                <a href="#eco-products" class="shop-btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-dots"></div>
+</section>
+
+    <!-- Products are here -->
+    <section id="eco-products" class="eco-store">
+        <div class="section-header">
+               <h2>Sustainable Products</h2>
+            <div class="category-tabs">
+                        <span class="active">New Launch</span>
+            </div>
+        </div>
+        <div class="product-container">
+            <!-- we got product from JavaScript -->
+        </div>
+    </section>
+
+ <!-- Carbon Calculator -->
+<section id="footprint" class="eco-calculator">
+    <h2>Product Usage Impact Calculator</h2>
+    <div class="calculator-container">
+        <div class="input-field">
+            <label>Select Product Type:</label>
+            <select id="product-type">
+                <option value="handwash">Handwash</option>
+                <option value="toothbrush">Toothbrush</option>
+                 <option value="detergent">Detergent</option>
+                <option value="bottles">Water Bottles</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <label>How many conventional products do you use monthly?</label>
+            <input type="number" id="conventional-usage" min="0" placeholder="Enter quantity">
+        </div>
+
+        <div class="input-field">
+            <label>How many eco-friendly products do you use monthly?</label>
+            <input type="number" id="eco-usage" min="0" placeholder="Enter quantity">
+         </div>
+
+        <button onclick="calculateProductImpact()" class="calc-btn">Calculate Savings</button>
+        
+        <div class="impact-results">
+            <div id="monthly-impact" class="impact-display"></div>
+            <div id="yearly-impact" class="impact-display"></div>
+            <div id="product-suggestions" class="suggestions"></div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Form -->
+    <section id="support" class="support-section">
+        <h2>Get In Touch</h2>
+        <form id="supportForm" onsubmit="submitForm(event)" class="contact-container">
+            <input type="text" placeholder="Your Name" required>
+                   <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 GreenFeels. Making Earth Better.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
